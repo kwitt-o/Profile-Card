@@ -12,6 +12,7 @@
 
 <body>
 
+    <!-- PROFILE CARD -->
     <article data-testid="test-profile-card" class="profile-card">
         <div class="profile-card-content">
 
@@ -39,6 +40,15 @@
                     <h3 id="time-heading" class="sr-only">Current Time</h3>
                     <p>Current Time (ms): <span data-testid="test-user-time"></span></p>
                 </section>
+
+                <div class="page-nav">
+                    <button id="nav-about" class="page-nav-button" data-testid="test-nav-about">
+                        About Me
+                    </button>
+                    <button id="nav-contact" class="page-nav-button" data-testid="test-nav-contact">
+                        Contact Us
+                    </button>
+                </div>
 
 
                 <nav aria-label="Social media links" class="social-nav">
@@ -101,6 +111,121 @@
             </main>
         </div>
     </article>
+
+    <!-- ABOUT ME PAGE -->
+    <main data-testid="test-about-page" class="page-container hidden" id="about-page">
+        <header class="page-header">
+            <h2>About Me</h2>
+            <button class="back-button" data-testid="test-back-button" aria-label="Back to profile">
+                &larr; Back to Profile
+            </button>
+        </header>
+
+        <section aria-labelledby="about-bio-heading">
+            <h3 id="about-bio-heading">Bio</h3>
+            <p data-testid="test-about-bio">
+                Frontend Developer with hands-on experience building scalable, responsive, and user-focusedapplications
+                using Angular, React, JavaScript, and TypeScript. Skilled in delivering maintainable code,optimizing
+                performance, and integrating backend services. Adept at collaborating across teams to deliverproducts
+                that improve usability, engagement, and business outcomes.
+            </p>
+        </section>
+
+        <section aria-labelledby="about-goals-heading">
+            <h3 id="about-goals-heading">Goals in this Program</h3>
+            <p data-testid="test-about-goals">
+                My main goal is to deepen my mastery of software development. I want to build a solid full-stack
+                foundation by strengthening my skills in both frontend and backend development, as well as DevOps. By
+                the end of this program, I aim to have a portfolio filled with real-world projects. I'm also
+                particularly interested in working on fintech projects to understand how products like digital wallets,
+                peer-to-peer transfers, and payment systems are built.
+            </p>
+        </section>
+
+        <section aria-labelledby="about-confidence-heading">
+            <h3 id="about-confidence-heading">Areas of Low Confidence</h3>
+            <p data-testid="test-about-confidence">
+                I currently feel less confident when working on projects that involve complex backend logic, especially
+                when it comes to designing robust server-side architectures or handling intricate data flows. As someone
+                who has primarily used Angular for frontend development, I also realized that my familiarity with React
+                is still growing. However, I've recently started learning and building small projects with React to
+                strengthen my versatility as a developer.
+            </p>
+        </section>
+
+        <section aria-labelledby="about-future-heading">
+            <h3 id="about-future-heading">Note to Future Self</h3>
+            <p data-testid="test-about-future-note">
+                Remember when you started this program with curiosity, determination, and a bit of uncertainty about
+                backend logic and React? You've come a long way since then. I hope by now you’ve gained solid confidence
+                in full-stack development and can build complete systems that connect the frontend, backend, and DevOps
+                seamlessly.
+                <br>
+                I also hope you've explored the fintech space more deeply — building or contributing to real projects
+                like digital wallets, savings platforms, or payment systems. These experiences are shaping you into not
+                just a developer, but a problem solver who understands how technology powers financial inclusion.
+
+                Keep learning, stay curious, and don't forget how far you've come. Every line of code and every
+                challenge you overcame brought you closer to the engineer you always wanted to be.
+            </p>
+        </section>
+
+        <section aria-labelledby="about-extra-heading">
+            <h3 id="about-extra-heading">Extra Thoughts</h3>
+            <p data-testid="test-about-extra">
+                I’ve come to realize that learning never really ends in tech. There’s always something new to figure
+                out, and that’s what keeps it exciting. Staying curious and picking up new skills along the way,
+                especially with how fast AI is changing things. This has really become a big part of how I grow and
+                learn. What’s even more amazing is how AI is making that growth easier, helping me learn faster and
+                build smarter.
+            </p>
+        </section>
+    </main>
+
+
+    <!-- CONTACT US PAGE -->
+    <div class="page-container hidden" id="contact-page">
+        <header class="page-header">
+            <h2>Contact Us</h2>
+            <button class="back-button" data-testid="test-back-button" aria-label="Back to profile">
+                &larr; Back to Profile
+            </button>
+        </header>
+
+        <form data-testid="test-contact-form" id="contact-form" novalidate>
+
+            <p class="success-message hidden" data-testid="test-contact-success" role="alert">
+                Your message has been sent successfully!
+            </p>
+
+            <div class="form-group">
+                <label for="contact-name">Full Name</label>
+                <input type="text" id="contact-name" data-testid="test-contact-name" required>
+                <p class="error-message" data-testid="test-contact-error-name" id="error-name" role="alert"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="contact-email">Email</label>
+                <input type="email" id="contact-email" data-testid="test-contact-email" required>
+                <p class="error-message" data-testid="test-contact-error-email" id="error-email" role="alert"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="contact-subject">Subject</label>
+                <input type="text" id="contact-subject" data-testid="test-contact-subject" required>
+                <p class="error-message" data-testid="test-contact-error-subject" id="error-subject" role="alert"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="contact-message">Message</label>
+                <textarea id="contact-message" data-testid="test-contact-message" rows="5" required
+                    minlength="10"></textarea>
+                <p class="error-message" data-testid="test-contact-error-message" id="error-message" role="alert"></p>
+            </div>
+
+            <button type="submit" data-testid="test-contact-submit" class="submit-button">Send Message</button>
+        </form>
+    </div>
 
 
 </body>
